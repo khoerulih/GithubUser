@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubUser.Starting">
         <activity
+            android:name=".ui.favorite.FavoriteActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.main.MainActivity"
+            android:theme="@style/Theme.GithubUser" />
+        <activity
             android:name=".ui.detail.DetailActivity"
             android:exported="false"
             android:parentActivityName=".ui.main.MainActivity"

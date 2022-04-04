@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/drawable/ic_baseline_location_city_18.xml" value="0.1495" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/drawable/ic_location_18.xml" value="0.1495" />
+        <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/drawable/ic_toggle.xml" value="0.115" />
+        <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/drawable/toggle_theme.xml" value="0.1" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout-v23/item_row_user.xml" value="0.20416666666666666" />
-        <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/activity_detail.xml" value="0.25" />
+        <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/activity_favorite.xml" value="0.20416666666666666" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/fragment_follow.xml" value="0.1" />
@@ -14,6 +17,7 @@
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/fragment_following.xml" value="0.20416666666666666" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/item_row_follow.xml" value="0.20416666666666666" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/item_row_user.xml" value="0.25" />
+        <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/layout/toggle_theme.xml" value="0.20416666666666666" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/menu/option_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/_LATIHAN/Android/FundamentalAndroid/GithubUser/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1495" />
       </map>

@@ -5,8 +5,9 @@
     <string name="username_tag">\u0040%s</string>
     <string name="following">Following</string>
     <string name="followers">Followers</string>
-    <string name="there_s_no_data_available_right_now">There\'s no data available right now</string>
     <string name="search">Search</string>
     <string name="search_hint">Search Username</string>
     <string name="no_follow">No data to show</string>
+    <string name="favorite">Favorite</string>
+    <string name="mode">Mode</string>
 </resources>

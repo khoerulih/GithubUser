@@ -4,24 +4,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.annotation.StringRes
-import androidx.viewpager2.widget.ViewPager2
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.githubuser.R
 import com.example.githubuser.data.remote.responses.DetailUserResponse
 import com.example.githubuser.databinding.ActivityDetailBinding
+import com.example.githubuser.ui.ViewModelFactory
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetailBinding
-    private val detailViewModel by viewModels<DetailViewModel>()
+    private var _binding: ActivityDetailBinding? = null
+    private val binding get() = _binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        _binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
+
+        val factory = ViewModelFactory.getInstance(this@DetailActivity.application)
+        val detailViewModel = ViewModelProvider(this, factory)[DetailViewModel::class.java]
 
         val username = intent.getStringExtra(EXTRA_USERNAME)
         val usernameTag = resources.getString(R.string.username_tag, username)
@@ -30,8 +33,8 @@ class DetailActivity : AppCompatActivity() {
 
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
         sectionsPagerAdapter.username = username
-        binding.viewPager.adapter = sectionsPagerAdapter
-        binding.viewPager.offscreenPageLimit = 1
+        binding?.viewPager?.adapter = sectionsPagerAdapter
+        binding?.viewPager?.offscreenPageLimit = 1
 
         detailViewModel.detailUser.observe(this) { detailUsers ->
             setDetailUser(detailUsers)
@@ -44,15 +47,18 @@ class DetailActivity : AppCompatActivity() {
         detailViewModel.isError.observe(this){
             showErrorMessage(it)
         }
+        binding?.fabFavorite?.setOnClickListener {
+            detailViewModel.setFavorite()
+            Toast.makeText(this, "Berhasil mengubah data favorite", Toast.LENGTH_SHORT).show()
+        }
 
         supportActionBar?.elevation = 0f
         supportActionBar?.title = usernameTag
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
     }
 
     private fun setDetailUser(data: DetailUserResponse) {
-        binding.apply {
+        binding?.apply {
             Glide.with(applicationContext)
                 .load(data.avatarUrl)
                 .circleCrop()
@@ -72,7 +78,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        binding.progressBar.visibility = if (isLoading) {
+        binding?.progressBar?.visibility = if (isLoading) {
             View.VISIBLE
         } else {
             View.GONE

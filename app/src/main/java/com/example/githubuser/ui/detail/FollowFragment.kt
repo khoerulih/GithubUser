@@ -5,18 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githubuser.data.remote.responses.ListUser
 import com.example.githubuser.databinding.FragmentFollowBinding
-import com.example.githubuser.adapters.ListUserAdapter
+import com.example.githubuser.ui.ListUserAdapter
+import com.example.githubuser.ui.ViewModelFactory
 
 class FollowFragment : Fragment() {
 
     private lateinit var binding: FragmentFollowBinding
 
-    private val detailViewModel by viewModels<DetailViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +28,9 @@ class FollowFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val factory = ViewModelFactory.getInstance(requireActivity().application)
+        val detailViewModel = ViewModelProvider(this, factory)[DetailViewModel::class.java]
 
         val username = arguments?.getString(ARG_USERNAME)
 

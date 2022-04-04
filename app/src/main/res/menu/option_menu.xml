@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <item
         android:id="@+id/search"
         android:icon="@drawable/ic_search_white_24"
         android:title="@string/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="collapseActionView|always" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_favorited_24"
+        android:title="@string/favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mode"
+        android:title="@string/mode"
+        android:checkable="true"
+        android:icon="@drawable/ic_dark_mode_24"
+        app:showAsAction="ifRoom" />
 </menu>

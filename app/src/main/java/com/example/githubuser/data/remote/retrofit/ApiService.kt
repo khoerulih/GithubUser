@@ -1,4 +1,4 @@
-package com.example.githubuser.data.remote
+package com.example.githubuser.data.remote.retrofit
 
 import com.example.githubuser.BuildConfig
 import com.example.githubuser.data.remote.responses.DetailUserResponse

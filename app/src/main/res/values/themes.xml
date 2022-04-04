@@ -39,4 +39,10 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="TabStyle">
+        <item name="android:background">@color/white</item>
+        <item name="tabIndicatorColor">@color/teal_500</item>
+        <item name="tabTextColor">@color/teal_500</item>
+    </style>
+
 </resources>

@@ -1,10 +1,8 @@
 package com.example.githubuser.ui.main
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.githubuser.data.remote.ApiConfig
+import androidx.lifecycle.*
+import com.example.githubuser.data.remote.retrofit.ApiConfig
 import com.example.githubuser.data.remote.responses.ListUser
 import com.example.githubuser.data.remote.responses.SearchUserResponse
 import retrofit2.Call
@@ -68,6 +66,7 @@ class MainViewModel : ViewModel() {
             }
         })
     }
+
 
     companion object {
         private const val TAG = "MainViewModel"
